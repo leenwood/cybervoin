@@ -1,11 +1,21 @@
 <?php
 
 namespace App\Controller;
+
 use Symfony\Component\HttpFoundation\Response;
 
+/**
+ * Важный компонент, для роутинга
+ */
+use Symfony\Component\Routing\Annotation\Route;
 
-class DefaultController
+
+
+class testController
 {
+    /**
+     * @Route("/number")
+     */
     public function number(): Response
     {
         $number = random_int(0, 100);
